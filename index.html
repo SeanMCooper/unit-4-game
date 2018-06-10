@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+        
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">  
+    <title>Crystal Collection</title>
+</head>
+
+<body>
+    <div class ="container">
+        <div class = "row">
+            <div class = "col-6">   
+                <h1>Crystal Collection<button id ="startButton">Start</button></h1>
+            </div>
+            <div class = "col-6">
+
+            </div>
+        </div>
+        
+        <div class = "row">
+            <div class = "col-6">
+                <div id = "instructionBox">
+                    <p>You are going to start with a random number!</p>
+                    <p>There are 4 crystals to chose from, each click will add a different amount of points specific to each crystal.</p>
+                    <p>You win the game by matching the total score to the random number generated, but you will lose if your score goes over..</p>
+                    <p>The value of the crystals will not be known until you click on them.</p>
+                    <p>Each time the game starts the crystal values will change.</p>
+                    <p>Good luck!</p>
+                </div>
+            </div>
+            <div class = "col-6">
+
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-3">
+                <div id = "neededScoreBox">
+                    <p><span id ="currentWinningNumber"></span></p>
+                </div>        
+            </div>
+            <div class = "col-3">
+                <div id = "winLossBox">
+                    <p>Wins: <span id ="winNumber">0</span></p><br>
+                    <p>Losses: <span id ="lossNumber">0</span></p>
+                </div>
+            </div>
+            <div class = "col-6">
+
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-12">
+                <div id = "crystalImages">
+                    <img id="crystal1" src="../unit-4-game/assets/images/crystal.png" height="150px" width="150px">
+                    <img id="crystal2" src="../unit-4-game/assets/images/crystal.png" height="150px" width="150px">
+                    <img id="crystal3" src="../unit-4-game/assets/images/crystal.png" height="150px" width="150px">
+                    <img id="crystal4" src="../unit-4-game/assets/images/crystal.png" height="150px" width="150px">
+                </div>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-4">
+                <div id = "currentScoreBox">
+                    <p>Your Score: <span id ="userScore">0</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

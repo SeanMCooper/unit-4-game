@@ -1,0 +1,32 @@
+body {
+    background-image: url(../images/brickwall.png);
+}
+
+
+h1 {
+    display: block; padding: 20px; background-color: gainsboro; color: black; margin-bottom: 3%; float: left;
+}
+
+#instructionBox {
+    display: block; padding: 20px; background-color: darkgrey; color: black; margin-bottom: 3%; float: left;
+}
+
+#neededScoreBox {
+    display: block; padding: 30px; background-color: gainsboro; color: darkblue; margin-bottom: 3%; float: left; font-size: 32px;
+}
+
+#currentWinningNumber {
+    display:  block; padding: 10px; background-color: darkgray; color: black; 
+}
+
+#winLossBox {
+    display: block; padding: 30px; background-color: gainsboro; color: blueviolet; margin-bottom: 3%; float: left; font-size:26px;
+}
+
+#currentScoreBox {
+    display:block; padding: 25px; background-color: darkgray; color: blue; float: left;font-size: 30px;
+}
+
+#crystalImages {
+    margin-bottom: 3%; margin-right: 5%; border: 5px, solid, darkgoldenrod;
+}
