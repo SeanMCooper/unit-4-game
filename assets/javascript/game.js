@@ -11,7 +11,9 @@ var gameRun = false;
 
 //This button begins the game when pressed
 $("#startButton").on("click", function(){
+    if(gameRun === false){
     gameStart();
+    }
 })
 
 function gameStart(){
@@ -22,7 +24,7 @@ function gameStart(){
 }
 
 function checkScore(){
-    while(gameRun = true){
+    while(gameRun === true){
         if(currentScore === randomNumber){
             gameWin();
         }else if(currentScore > randomNumber){
@@ -58,8 +60,9 @@ function determineCrystalsValues(){
 // will refresh all values sans wins/losses
 function gameRefresh(){
     console.log("game refreshed");
-    var currentScore = 0;
+    currentScore = 0;
     crystalValues = []
+    displayAll();
     
     }
 
@@ -84,40 +87,48 @@ function gameLoss(){
 
 //win
 function gameWin(){
-    alert("Great job!");
     wins++;
+    alert("Great job!");
     gameRun = false;
     gameRefresh();
     }
 
 // Click events to add points from crystals
 $("#crystal1").on("click", function(){
-    crystalOne = crystalValues[0]
-    currentScore = currentScore+crystalOne;
-    console.log(currentScore);
-    displayAll();
-    checkScore();
+    if(gameRun === true){
+        crystalOne = crystalValues[0]
+        currentScore = currentScore+crystalOne;
+        console.log(currentScore);
+        displayAll();
+        checkScore();
+    }
 })
 $("#crystal2").on("click", function(){
-    crystalTwo = crystalValues[1]
-    currentScore = currentScore+crystalTwo;
-    console.log(currentScore);
-    displayAll();
-    checkScore();
+    if(gameRun === true){
+        crystalTwo = crystalValues[1]
+        currentScore = currentScore+crystalTwo;
+        console.log(currentScore);
+        displayAll();
+        checkScore();
+    }
 })
 $("#crystal3").on("click", function(){
-    crystalThree = crystalValues[2]
-    currentScore = currentScore+crystalThree;
-    console.log(currentScore);
-    displayAll();
-    checkScore();
+    if(gameRun === true){
+        crystalThree = crystalValues[2]
+        currentScore = currentScore+crystalThree;
+        console.log(currentScore);
+        displayAll();
+        checkScore();
+    }
 })
 $("#crystal4").on("click", function(){
-    crystalFour = crystalValues[3]
-    currentScore = currentScore+crystalFour;
-    console.log(currentScore);
-    displayAll();
-    checkScore();
+    if(gameRun === true){
+        crystalFour = crystalValues[3]
+        currentScore = currentScore+crystalFour;
+        console.log(currentScore);
+        displayAll();
+        checkScore();
+    }
 })
 
 
