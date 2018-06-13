@@ -7,12 +7,10 @@ var currentScore = 0;
 var gameRun = false;
 
 
-
-
 //This button begins the game when pressed
 $("#startButton").on("click", function(){
     if(gameRun === false){
-    gameStart();
+        gameStart();
     }
 })
 
@@ -47,33 +45,29 @@ function determineCrystalPosition(){
 //to determine the 4 random values of crystals --- random # 2-10
 function determineCrystalsValues(){
     while(crystalValues.length < 4){
-        var randomCrystal = Math.floor((Math.random() *10)+2);
-        if(crystalValues.indexOf(randomCrystal) > -1) 
-        continue;
-        crystalValues[crystalValues.length] = randomCrystal;
-        console.log(crystalValues)
-        determineCrystalPosition();
+        var randomCrystal = Math.floor((Math.random() *9)+2);
+        if(!crystalValues.includes(randomCrystal)){
+            crystalValues.push(randomCrystal);
+            console.log(crystalValues);
+            determineCrystalPosition();
+        }
     }
 }
     
-
 // will refresh all values sans wins/losses
 function gameRefresh(){
     console.log("game refreshed");
     currentScore = 0;
     crystalValues = []
     displayAll();
-    
-    }
-
+}
 
 //generate # from 20-100
 function generateRandom(){
-    randomNumber = Math.floor((Math.random() * 81) + 19);
+    randomNumber = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
     displayAll();
     console.log(randomNumber);
 }
-
 
 //lose
 function gameLoss(){
@@ -82,8 +76,7 @@ function gameLoss(){
     displayAll();
     gameRun = false;
     gameRefresh();
-
-    }
+}
 
 //win
 function gameWin(){
@@ -91,7 +84,7 @@ function gameWin(){
     alert("Great job!");
     gameRun = false;
     gameRefresh();
-    }
+}
 
 // Click events to add points from crystals
 $("#crystal1").on("click", function(){
@@ -131,7 +124,6 @@ $("#crystal4").on("click", function(){
     }
 })
 
-
 // to update HTML with game data
 function displayAll(){
     $("#currentWinningNumber").text(randomNumber);
@@ -139,8 +131,6 @@ function displayAll(){
     $("#winNumber").text(wins);
     $("#lossNumber").text(losses);
 }
-
-
 
 /* Other Variations of randomizing crystal values.(maybe dont delete)
 function determineCrystals(){
