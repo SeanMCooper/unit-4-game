@@ -2,7 +2,6 @@ var wins = 0;
 var losses = 0;
 var randomNumber = 0;
 var crystalValues = []
-var numberOfCrystals = "four"
 var currentScore = 0;
 var gameRun = false;
 
@@ -132,10 +131,3 @@ function displayAll(){
     $("#lossNumber").text(losses);
 }
 
-/* Other Variations of randomizing crystal values.(maybe dont delete)
-function determineCrystals(){
-    for(var i = 0; i < numberOfCrystals.length; i++){
-    crystalValues[i] = Math.floor((Math.random() * 10)+1);
-     }
-     console.log(crystalValues);
-} */
